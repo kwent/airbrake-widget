@@ -5,7 +5,7 @@ function setupParts() {
     setupParts.called = true;
     CreateInfoButton('info', { foregroundStyle: 'black', frontID: 'front', onclick: 'showBack', backgroundStyle: 'black' });
     CreateGlassButton('done', { onclick: 'saveProject', text: 'Done' });
-    CreateText('hoptoad-back', { text: 'hoptoadapp.com' });
+    CreateText('hoptoad-back', { text: 'airbrake.io' });
     CreateText('text2', { text: 'API Key:' });
     CreateText('text1', { text: 'Subdomain:' });
     CreateText('inform', { text: 'Inform your account info' });

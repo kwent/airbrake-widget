@@ -7,7 +7,7 @@ require "time"
 
 class HopToad
   def url
-    "http://#{subdomain}.hoptoadapp.com/errors.xml?auth_token=#{api_key}&page=#{page}"
+    "https://#{subdomain}.airbrake.io/errors.xml?auth_token=#{api_key}&page=#{page}"
   end
 
   def api_key
@@ -53,7 +53,7 @@ if ht.authorized?
       id          = group.elements["id"].text.to_i
 
       contents << %(
-        <p onclick="widget.openURL('http://#{ht.subdomain}.hoptoadapp.com/errors/#{id}');" title="Go to HopToad" id="exception-#{id}" class="exception">
+        <p onclick="widget.openURL('http://#{ht.subdomain}.airbrake.io/errors/#{id}');" title="Go to Airbrake" id="exception-#{id}" class="exception">
           <strong>#{count}</strong>
           <a>#{message}</a>
           <span class="timeago">
