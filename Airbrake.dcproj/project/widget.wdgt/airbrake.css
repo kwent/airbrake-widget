@@ -20,12 +20,12 @@ body {
     display: block;
     top: 0px;
     left: 0px;
-    bottom: 0px;
-    right: 0px;
     width: auto;
     height: auto;
     font-family: HelveticaNeue-BoldItalic;
     font-size: 11pt;
+    right: 0px;
+    bottom: 0px;
 }
 
 #text1 {
@@ -36,12 +36,12 @@ body {
     color: rgb(255, 255, 255);
     text-shadow: rgb(0, 0, 0) 1px 1px 0px;
     font-family: LucidaGrande;
-    left: 100px;
+    left: 137px;
     top: 67px;
     width: auto;
     height: auto;
-    right: 105px;
-    bottom: 297px;
+    right: 141px;
+    bottom: 354px;
 }
 
 #text2 {
@@ -52,12 +52,12 @@ body {
     color: rgb(255, 255, 255);
     text-shadow: rgb(0, 0, 0) 1px 1px 0px;
     font-family: LucidaGrande;
-    left: 114px;
+    left: 150px;
     top: 122px;
     width: auto;
     height: auto;
-    right: 115px;
-    bottom: 242px;
+    right: 156px;
+    bottom: 301px;
 }
 
 #text3 {
@@ -68,12 +68,12 @@ body {
     color: rgb(255, 255, 255);
     text-shadow: rgb(0, 0, 0) 1px 1px 0px;
     font-family: LucidaGrande;
-    left: 76px;
+    left: 116px;
     top: 183px;
     width: auto;
     height: auto;
-    right: 84px;
-    bottom: 181px;
+    right: 119px;
+    bottom: 240px;
 }
 
 #option {
@@ -86,11 +86,12 @@ body {
     font-family: 'Lucida Grande';
     font-size: 11px;
     left: 20px;
-    top: 47px;
+    top: 58px;
     position: absolute;
-    height: 280px;
-    width: 240px;
+    height: 332px;
+    width: 320px;
     overflow: auto;
+    letter-spacing: 0px;
 }
 
 #apiKey {
@@ -99,10 +100,10 @@ body {
     font-size: 10pt;
     font-family: LucidaGrande;
     width: 151px;
-    left: 58px;
+    left: 102px;
     top: 145px;
     height: auto;
-    bottom: 213px;
+    bottom: 275px;
 }
 
 #subdomain {
@@ -111,10 +112,10 @@ body {
     font-size: 10pt;
     font-family: LucidaGrande;
     width: 150px;
-    left: 58px;
+    left: 102px;
     top: 90px;
     height: auto;
-    bottom: 268px;
+    bottom: 330px;
 }
 
 #loading {
@@ -137,7 +138,10 @@ body {
 
 #no-exceptions {
     left: 20px;
-    width: 250px;
+    width: 319px;
+    height: auto;
+    top: 0px;
+    bottom: 442px;
 }
 
 div.exception {
@@ -147,7 +151,7 @@ div.exception {
     margin-right: 10px;
     position: relative;
     cursor: pointer;
-    width: 215px;
+    width: 320px;
     overflow: hidden;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -221,12 +225,12 @@ div.exception .timeago {
     font-size: 18pt;
     font-family: Futura;
     text-shadow: rgb(0, 0, 0) 1px 1px 1px;
-    left: 74px;
+    left: 120px;
     top: 20px;
     width: auto;
     height: auto;
-    right: 77px;
-    bottom: 332px;
+    right: 114px;
+    bottom: 391px;
 }
 
 #airbrake-front {
@@ -237,19 +241,20 @@ div.exception .timeago {
     font-size: 18pt;
     font-family: Futura;
     text-shadow: rgb(0, 0, 0) 1px 1px 1px;
-    left: 75px;
+    left: 120px;
     width: 130px;
     top: 17px;
+    bottom: auto;
 }
 
 #author {
     cursor: pointer;
     width: auto;
     height: auto;
-    top: 352px;
-    left: 81px;
-    right: 69px;
-    bottom: 17px;
+    top: 409px;
+    left: 114px;
+    right: 108px;
+    bottom: 19px;
 }
 
 #unable {
@@ -261,8 +266,10 @@ div.exception .timeago {
     color: rgb(178, 178, 178);
     font-size: 18pt;
     width: 240px;
-    left: 20px;
-    top: 116px;
+    left: 70px;
+    top: 0px;
+    height: auto;
+    bottom: 442px;
 }
 
 #reload {
@@ -277,10 +284,15 @@ div.exception .timeago {
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
     position: absolute;
-    top: 340px;
-    left: 30px;
+    top: 400px;
+    left: 25px;
     cursor: pointer;
     color: rgb(255, 255, 255);
+    width: auto;
+    height: auto;
+    min-height: 13px;
+    right: 287px;
+    bottom: 23px;
 }
 
 #reload:hover {
@@ -297,23 +309,23 @@ div.exception .timeago {
     position: absolute;
     width: 15px;
     height: 15px;
-    top: 340px;
-    left: 240px;
+    top: 404px;
+    left: 325px;
 }
 
 #done {
     position: absolute;
     width: 50px;
     height: 22px;
-    top: 310px;
-    left: 115px;
+    top: 313px;
+    left: 153px;
 }
 
 #slider {
     width: 157px;
     height: 15px;
     position: absolute;
-    left: 56px;
+    left: 98px;
     top: 209px;
     right: auto;
     bottom: auto;
@@ -348,8 +360,17 @@ div.exception .timeago {
     width: auto;
     height: auto;
     top: 230px;
-    left: 69px;
+    left: 93px;
     text-align: center;
-    right: 65px;
-    bottom: 139px;
+    right: 88px;
+    bottom: 193px;
+}
+
+#inform {
+    width: 203px;
+    height: 64px;
+    top: 201px;
+    left: 83px;
+    right: 80px;
+    bottom: 252px;
 }
