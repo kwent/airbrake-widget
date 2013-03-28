@@ -24,7 +24,7 @@ function remove()
     // Stop any timers to prevent CPU usage
     // Remove any preferences as needed
     clearTimeout(TIMEOUT);
-    clearTimeout(GROWL);
+    // clearTimeout(GROWL);
     widget.setPreferenceForKey(null, createInstancePreferenceKey("AirbrakeApiKey"));
     widget.setPreferenceForKey(null, createInstancePreferenceKey("AirbrakeSubdomain"));
 
@@ -110,7 +110,7 @@ function showFront(event)
 	
 	$("#reload").click(function(){
 		loadExceptions(true);
-		displayGrowlMessage();
+		//displayGrowlMessage();
 	});
 	
 	loadExceptions();
@@ -175,7 +175,7 @@ function loadExceptions(should_growl) {
 					.addClass('hide');
 				
 				$("abbr").timeago();
-				growlNotifier();
+				//growlNotifier();
 			} else if (output.match(/no-results/)) {
 				$('#no-exceptions')
 					.removeClass('hide');
