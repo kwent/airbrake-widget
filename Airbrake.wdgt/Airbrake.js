@@ -11,7 +11,6 @@ function load()
 {
 	setupParts();
 	loadExceptions();
-	//growlNotifier();
 	log("load", "widget has been loaded");
 }
 
@@ -24,7 +23,6 @@ function remove()
     // Stop any timers to prevent CPU usage
     // Remove any preferences as needed
     clearTimeout(TIMEOUT);
-    // clearTimeout(GROWL);
     widget.setPreferenceForKey(null, createInstancePreferenceKey("AirbrakeApiKey"));
     widget.setPreferenceForKey(null, createInstancePreferenceKey("AirbrakeSubdomain"));
 
@@ -110,7 +108,6 @@ function showFront(event)
 	
 	$("#reload").click(function(){
 		loadExceptions(true);
-		//displayGrowlMessage();
 	});
 	
 	loadExceptions();
@@ -135,17 +132,7 @@ function preferences() {
 	}
 }
 
-function growlNotifier() {
-	clearTimeout(NOTIFIER);
-	log("notification", "trying to display using growl");
-	
-	var cmd = '/usr/bin/osascript GrowlNotifier.scpt';
-	widget.system(cmd, function(){});
-	
-	NOTIFIER = setTimeout(growlNotifier, 1 * MINUTE);
-}
-
-function loadExceptions(should_growl) {
+function loadExceptions() {
 	clearTimeout(TIMEOUT);
 	
 	var prefs = preferences();
@@ -175,7 +162,6 @@ function loadExceptions(should_growl) {
 					.addClass('hide');
 				
 				$("abbr").timeago();
-				//growlNotifier();
 			} else if (output.match(/no-results/)) {
 				$('#no-exceptions')
 					.removeClass('hide');
