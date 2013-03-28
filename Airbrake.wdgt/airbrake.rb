@@ -5,8 +5,6 @@ require "uri"
 require "net/http"
 require "time"
 
-OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
-
 class Airbrake
   def url
     "https://#{subdomain}.airbrake.io/errors.xml?auth_token=#{api_key}&page=#{page}"

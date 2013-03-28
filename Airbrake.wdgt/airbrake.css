@@ -14,11 +14,10 @@ body {
 #info {
     position: absolute;
     right: 15px;
-    bottom: 18px;
+    top: 345px;
     width: 13px;
     height: 13px;
-    top: 21px;
-    left: 326px;
+    left: 245px;
 }
 
 #back {
@@ -38,9 +37,9 @@ body {
 
 #done {
     position: absolute;
-    right: 53px;
+    left: 120px;
     margin-left: auto;
-    bottom: 53px;
+    bottom: 30px;
     margin-top: auto;
 }
 
@@ -65,7 +64,7 @@ body {
     color: rgb(255, 255, 255);
     text-shadow: rgb(0, 0, 0) 1px 1px 0px;
     font-family: LucidaGrande;
-    left: 70px;
+    left: 20px;
     top: 134px;
 }
 
@@ -83,11 +82,11 @@ body {
     background-attachment: initial;
     -khtml-background-clip: initial;
     -khtml-background-origin: initial;
-    left: 25px;
-    top: 70px;
+    left: 20px;
+    top: 50px;
     position: absolute;
-    height: 145px;
-    width: 320px;
+    height: 280px;
+    width: 240px;
     overflow: auto;
 }
 
@@ -96,8 +95,8 @@ body {
     color: black;
     font-size: 10pt;
     font-family: LucidaGrande;
-    width: 169px;
-    left: 132px;
+    width: 170px;
+    left: 80px;
     top: 128px;
 }
 
@@ -109,7 +108,7 @@ body {
     color: rgb(255, 255, 255);
     text-shadow: rgb(0, 0, 0) 1px 1px 0px;
     font-family: LucidaGrande;
-    left: 46px;
+    left: 20px;
     top: 99px;
 }
 
@@ -118,8 +117,8 @@ body {
     color: black;
     font-size: 10pt;
     font-family: LucidaGrande;
-    width: 169px;
-    left: 132px;
+    width: 150px;
+    left: 100px;
     top: 94px;
 }
 
@@ -128,8 +127,7 @@ body {
     position: absolute;
 }
 
-#inform,
-#no-exceptions {
+#inform, #no-exceptions {
     position: absolute;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -137,8 +135,8 @@ body {
     font-family: ArialRoundedMTBold;
     color: rgb(178, 178, 178);
     font-size: 18pt;
-    width: 195px;
-    left: 82px;
+    width: 200px;
+    left: 40px;
     top: 116px;
 }
 
@@ -208,8 +206,8 @@ p.exception .timeago {
     font-size: 18pt;
     font-family: ArialRoundedMTBold;
     text-shadow: rgb(0, 0, 0) 1px 1px 1px;
-    left: 42px;
-    top: 61px;
+    left: 75px;
+    top: 20px;
 }
 
 #airbrake-front {
@@ -220,7 +218,7 @@ p.exception .timeago {
     font-size: 18pt;
     font-family: ArialRoundedMTBold;
     text-shadow: rgb(0, 0, 0) 1px 1px 1px;
-    left: 25px;
+    left: 35px;
     top: 17px;
 }
 
@@ -236,8 +234,8 @@ p.exception .timeago {
     font-family: ArialRoundedMTBold;
     color: rgb(178, 178, 178);
     font-size: 18pt;
-    width: 215px;
-    left: 71px;
+    width: 240px;
+    left: 20px;
     top: 116px;
 }
 
@@ -250,8 +248,8 @@ p.exception .timeago {
 	padding: 3px;
 	-webkit-border-radius: 3px;
 	position: absolute;
-	top: 40px;
-	right: 25px;
+	top: 340px;
+	left: 30px;
 	cursor: pointer;
 	color: #fff;
 }

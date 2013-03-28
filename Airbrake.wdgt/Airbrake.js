@@ -11,7 +11,7 @@ function load()
 {
 	setupParts();
 	loadExceptions();
-	growlNotifier();
+	//growlNotifier();
 	log("load", "widget has been loaded");
 }
 
@@ -163,6 +163,8 @@ function loadExceptions(should_growl) {
 		widget.system(cmd, function(cmd){
 			log("step", "command executed");
 			var output = cmd.outputString;
+            
+            log("output", output);
 			
 			if (output.match(/exception/gim)) {
 				$("#scrollArea")
