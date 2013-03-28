@@ -8,16 +8,7 @@ body {
 }
 
 .hide {
-	display: none;
-}
-
-#info {
-    position: absolute;
-    right: 15px;
-    top: 345px;
-    width: 13px;
-    height: 13px;
-    left: 245px;
+    display: none;
 }
 
 #back {
@@ -33,14 +24,6 @@ body {
     width: auto;
     bottom: 0px;
     height: auto;
-}
-
-#done {
-    position: absolute;
-    left: 120px;
-    margin-left: auto;
-    bottom: 30px;
-    margin-top: auto;
 }
 
 #frontImg {
@@ -64,8 +47,12 @@ body {
     color: rgb(255, 255, 255);
     text-shadow: rgb(0, 0, 0) 1px 1px 0px;
     font-family: LucidaGrande;
-    left: 20px;
-    top: 134px;
+    left: 114px;
+    top: 120px;
+    width: auto;
+    height: auto;
+    right: 115px;
+    bottom: 244px;
 }
 
 #option {
@@ -77,11 +64,8 @@ body {
 #scrollArea {
     font-family: 'Lucida Grande';
     font-size: 11px;
-    background-image: initial;
-    background-repeat: initial;
-    background-attachment: initial;
     left: 20px;
-    top: 50px;
+    top: 47px;
     position: absolute;
     height: 280px;
     width: 240px;
@@ -93,9 +77,11 @@ body {
     color: black;
     font-size: 10pt;
     font-family: LucidaGrande;
-    width: 170px;
-    left: 80px;
-    top: 128px;
+    width: 151px;
+    left: 58px;
+    top: 142px;
+    height: auto;
+    bottom: 216px;
 }
 
 #text1 {
@@ -106,8 +92,12 @@ body {
     color: rgb(255, 255, 255);
     text-shadow: rgb(0, 0, 0) 1px 1px 0px;
     font-family: LucidaGrande;
-    left: 20px;
-    top: 99px;
+    left: 100px;
+    top: 67px;
+    width: auto;
+    height: auto;
+    right: 105px;
+    bottom: 297px;
 }
 
 #subdomain {
@@ -116,8 +106,10 @@ body {
     font-size: 10pt;
     font-family: LucidaGrande;
     width: 150px;
-    left: 100px;
-    top: 94px;
+    left: 58px;
+    top: 90px;
+    height: auto;
+    bottom: 268px;
 }
 
 #loading {
@@ -139,49 +131,69 @@ body {
 }
 
 #no-exceptions {
-	left: 20px;
-	width: 250px;
+    left: 20px;
+    width: 250px;
 }
 
-p.exception {
+div.exception {
     background-color: rgb(233, 233, 233);
-    padding: 7px 10px;
-    margin-bottom: 10px;
+    padding: 0px 5px;
+    margin-bottom: 5px;
     margin-right: 10px;
     position: relative;
     cursor: pointer;
-    -webkit-border-radius: 10px;
+    width: 215px;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-sizing: border-box;
+    word-wrap: break-word;
 }
 
-p.exception:hover {
-	background: #ddd;
+div.exception:hover {
+    background-color: rgb(221, 221, 221);
 }
 
-p.exception strong {
-    display: inline-block;
+div.exception strong {
+    display: block;
     color: rgb(255, 255, 255);
-    font-size: 16px;
+    font-size: 14px;
     background-color: rgb(111, 184, 0);
-    padding: 3px;
+    padding: 5px;
     min-width: 20px;
-    min-height: 20px;
+    min-height: 15px;
     text-align: center;
-    -webkit-border-radius: 5px;
-	float: right;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: relative;
+    margin-right: 5px;
+    margin-bottom: 3px;
+    float: left;
+    white-space: pre-line;
+    word-wrap: break-word;
 }
 
-p.exception a {
+div.exception p {
+    margin: 4px 0px;
+    overflow: hidden;
+}
+
+div.exception a {
     font-size: 11px;
     color: rgb(119, 119, 119);
-    display: inline;
+    display: block;
 }
 
-p.exception abbr {
+div.exception abbr {
     font-color: #666;
 }
 
-p.exception .timeago {
-	white-space: nowrap;
+div.exception .timeago {
+    white-space: nowrap;
 }
 
 #author {
@@ -202,10 +214,14 @@ p.exception .timeago {
     overflow: hidden;
     color: rgb(255, 255, 255);
     font-size: 18pt;
-    font-family: ArialRoundedMTBold;
+    font-family: Futura;
     text-shadow: rgb(0, 0, 0) 1px 1px 1px;
-    left: 75px;
+    left: 74px;
     top: 20px;
+    width: auto;
+    height: auto;
+    right: 77px;
+    bottom: 332px;
 }
 
 #airbrake-front {
@@ -214,7 +230,7 @@ p.exception .timeago {
     overflow: hidden;
     color: rgb(255, 255, 255);
     font-size: 18pt;
-    font-family: ArialRoundedMTBold;
+    font-family: Futura;
     text-shadow: rgb(0, 0, 0) 1px 1px 1px;
     left: 75px;
     width: 130px;
@@ -223,6 +239,12 @@ p.exception .timeago {
 
 #author {
     cursor: pointer;
+    width: auto;
+    height: auto;
+    top: 350px;
+    left: 81px;
+    right: 69px;
+    bottom: 19px;
 }
 
 #unable {
@@ -239,26 +261,29 @@ p.exception .timeago {
 }
 
 #reload {
-	text-transform: lowercase;
-	background: #aaa;
-	display: inline-block;
-	font-family: ArialRoundedMTBold;
-	font-size: 11px;
-	padding: 3px;
-	-webkit-border-radius: 3px;
-	position: absolute;
-	top: 340px;
-	left: 30px;
-	cursor: pointer;
-	color: #fff;
+    text-transform: lowercase;
+    background-color: rgb(170, 170, 170);
+    display: inline-block;
+    font-family: ArialRoundedMTBold;
+    font-size: 11px;
+    padding: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    position: absolute;
+    top: 340px;
+    left: 30px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
 }
 
 #reload:hover {
-	background: #777;
+    background-color: rgb(119, 119, 119);
 }
 
 #front {
-	width: 360px;
-	height: 240px;
-	position: relative;
+    width: 360px;
+    height: 240px;
+    position: relative;
 }

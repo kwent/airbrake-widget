@@ -115,14 +115,19 @@ function showFront(event)
 
 function saveProject(event)
 {
-	widget.setPreferenceForKey($("#apiKey").val().toString(), createInstancePreferenceKey("AirbrakeApiKey"));
-	widget.setPreferenceForKey($("#subdomain").val().toString(), createInstancePreferenceKey("AirbrakeSubdomain"));
+  log("event", event.type);
+
+  if( event.type == "mouseup" || ( event.type == "keypress" && event.which == 13) )
+  {
+  	widget.setPreferenceForKey($("#apiKey").val().toString(), createInstancePreferenceKey("AirbrakeApiKey"));
+    widget.setPreferenceForKey($("#subdomain").val().toString(), createInstancePreferenceKey("AirbrakeSubdomain"));
 	
-	$('#apiKey').val("");
-	$('#subdomain').val("");
-	showFront(event);
+    $('#apiKey').val("");
+    $('#subdomain').val("");
+    showFront(event);
 	
-	log("preferences", "api key and subdomain has been saved");
+    log("preferences", "api key and subdomain has been saved");
+  }
 }
 
 function preferences() {

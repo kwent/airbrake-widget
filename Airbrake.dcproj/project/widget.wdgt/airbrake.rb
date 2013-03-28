@@ -53,13 +53,15 @@ if ht.authorized?
       id          = group.elements["id"].text.to_i
 
       contents << %(
-        <p onclick="widget.openURL('http://#{ht.subdomain}.airbrake.io/errors/#{id}');" title="Go to Airbrake" id="exception-#{id}" class="exception">
-          <strong>#{count}</strong>
-          <a>#{message}</a>
-          <span class="timeago">
-            ~ <abbr title="#{most_recent.utc.strftime("%FT%T%z")}">#{most_recent.strftime("%b %d, %Y ~ %I:%M%p")}</abbr>
-          </span>
-        </p>
+        <div onclick="widget.openURL('http://#{ht.subdomain}.airbrake.io/errors/#{id}');" title="Go to Airbrake" id="exception-#{id}" class="exception">
+          <p>
+            <strong>#{count}</strong>
+            <a>#{message.gsub('::',' :: ')}</a>
+            <span class="timeago">
+              ~ <abbr title="#{most_recent.utc.strftime("%FT%T%z")}">#{most_recent.strftime("%b %d, %Y ~ %I:%M%p")}</abbr>
+            </span>
+          </p>
+        </div>
       )
     }
   end

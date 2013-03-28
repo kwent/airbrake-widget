@@ -10,7 +10,7 @@
 	<key>CYBackwardCompatibleExport</key>
 	<false/>
 	<key>CYLastWindowPosition</key>
-	<string>{613, 114}</string>
+	<string>{695, 127}</string>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -21,8 +21,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {733, 402}}</string>
-			<string>{{0, 412}, {733, 197}}</string>
+			<string>{{0, 0}, {848, 404}}</string>
+			<string>{{0, 414}, {848, 197}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -58,12 +58,12 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {355, 630}}</string>
-			<string>{{356, 0}, {734, 630}}</string>
+			<string>{{0, 0}, {431, 632}}</string>
+			<string>{{432, 0}, {849, 632}}</string>
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>77 127 1089 651 0 0 1280 778 </string>
+	<string>0 125 1280 653 0 0 1280 778 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -74,8 +74,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {357, 337}}</string>
-			<string>{{0, 347}, {357, 262}}</string>
+			<string>{{0, 0}, {433, 338}}</string>
+			<string>{{0, 348}, {433, 263}}</string>
 		</array>
 	</dict>
 	<key>Objects view expanded items</key>
@@ -105,16 +105,43 @@
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
+				<integer>2</integer>
+			</array>
+			<array>
+				<integer>0</integer>
 				<integer>1</integer>
 			</array>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
-				<integer>2</integer>
+				<integer>1</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>0</integer>
 			</array>
 		</array>
 		<key>Objects view last selections</key>
-		<array/>
+		<array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>1</integer>
+			</array>
+		</array>
 		<key>Visible StackLayout Views</key>
 		<array>
 			<string>front</string>
