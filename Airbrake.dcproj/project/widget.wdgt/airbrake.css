@@ -20,10 +20,10 @@ body {
     display: block;
     top: 0px;
     left: 0px;
-    right: 0px;
     width: auto;
-    bottom: 0px;
     height: auto;
+    right: 0px;
+    bottom: 0px;
 }
 
 #frontImg {
@@ -39,6 +39,22 @@ body {
     font-size: 11pt;
 }
 
+#text1 {
+    position: absolute;
+    font-size: 10pt;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 1px 1px 0px;
+    font-family: LucidaGrande;
+    left: 100px;
+    top: 79px;
+    width: auto;
+    height: auto;
+    right: 105px;
+    bottom: 285px;
+}
+
 #text2 {
     position: absolute;
     font-size: 10pt;
@@ -48,11 +64,43 @@ body {
     text-shadow: rgb(0, 0, 0) 1px 1px 0px;
     font-family: LucidaGrande;
     left: 114px;
-    top: 120px;
+    top: 132px;
     width: auto;
     height: auto;
     right: 115px;
-    bottom: 244px;
+    bottom: 232px;
+}
+
+#text3 {
+    position: absolute;
+    font-size: 10pt;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 1px 1px 0px;
+    font-family: LucidaGrande;
+    left: 76px;
+    top: 193px;
+    width: auto;
+    height: auto;
+    right: 84px;
+    bottom: 171px;
+}
+
+#text4 {
+    position: absolute;
+    font-size: 10pt;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 1px 1px 0px;
+    font-family: LucidaGrande;
+    left: 83px;
+    top: 246px;
+    width: auto;
+    height: auto;
+    right: 77px;
+    bottom: 118px;
 }
 
 #option {
@@ -79,25 +127,9 @@ body {
     font-family: LucidaGrande;
     width: 151px;
     left: 58px;
-    top: 142px;
+    top: 154px;
     height: auto;
-    bottom: 216px;
-}
-
-#text1 {
-    position: absolute;
-    font-size: 10pt;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    color: rgb(255, 255, 255);
-    text-shadow: rgb(0, 0, 0) 1px 1px 0px;
-    font-family: LucidaGrande;
-    left: 100px;
-    top: 67px;
-    width: auto;
-    height: auto;
-    right: 105px;
-    bottom: 297px;
+    bottom: 204px;
 }
 
 #subdomain {
@@ -107,9 +139,9 @@ body {
     font-family: LucidaGrande;
     width: 150px;
     left: 58px;
-    top: 90px;
+    top: 102px;
     height: auto;
-    bottom: 268px;
+    bottom: 256px;
 }
 
 #loading {
@@ -299,6 +331,28 @@ div.exception .timeago {
     position: absolute;
     width: 50px;
     height: 22px;
-    top: 200px;
+    top: 310px;
     left: 115px;
+}
+
+#slider {
+    width: 157px;
+    height: 15px;
+    position: absolute;
+    left: 56px;
+    top: 215px;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+}
+
+#slider1 {
+    width: 156px;
+    height: 15px;
+    position: absolute;
+    left: 56px;
+    top: 279px;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
 }

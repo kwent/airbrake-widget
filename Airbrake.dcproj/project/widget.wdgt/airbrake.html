@@ -31,10 +31,17 @@
     </div>
     <div id="back">
         <img id="backImg" src="Images/back.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.backimage" apple-style=" image-radius: 12,12,12,12; image-border: 1; image-border-color: 0.1500,0.1500,0.1500; image-border-width: 3; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0.0000,0.0000,0.0000,0.3333;">
-        <div id="text1">Subdomain:</div><input type="text" name="" value="" id="subdomain" onkeypress="saveProject(event)"><div id="text2">API Key:</div><input type="text" name="" value="" id="apiKey" onkeypress="saveProject(event)">
+        <div id="text1">Subdomain</div>
+        <input type="text" name="" value="" id="subdomain" onkeypress="saveProject(event)">
+        <div id="text2">API Key</div>
+        <input type="text" name="" value="" id="apiKey" onkeypress="saveProject(event)">
         <div id="airbrake-back">airbrake.io</div>
+        <div id="text3">Warning Threshold</div>
+        <div id="text4">Danger Threshold</div>
         <div id="author">Created by Quentin Rousseau</div>
         <div id="done"></div>
+        <input id="slider" apple-part="com.apple.Dashcode.part.slider" type="range" min="0" value="0" max="100">
+        <input id="slider1" apple-part="com.apple.Dashcode.part.slider" type="range" min="0" value="0" max="100">
     </div>
 </body>
 </html>
