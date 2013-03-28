@@ -244,7 +244,6 @@ div.exception .timeago {
     top: 350px;
     left: 81px;
     right: 69px;
-    bottom: 19px;
 }
 
 #unable {
@@ -286,4 +285,20 @@ div.exception .timeago {
     width: 360px;
     height: 240px;
     position: relative;
+}
+
+#info {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 340px;
+    left: 240px;
+}
+
+#done {
+    position: absolute;
+    width: 50px;
+    height: 22px;
+    top: 200px;
+    left: 115px;
 }

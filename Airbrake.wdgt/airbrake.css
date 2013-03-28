@@ -11,15 +11,6 @@ body {
     display: none;
 }
 
-#info {
-    position: absolute;
-    right: 15px;
-    top: 345px;
-    width: 13px;
-    height: 13px;
-    left: 245px;
-}
-
 #back {
     display: none;
 }
@@ -33,18 +24,6 @@ body {
     width: auto;
     bottom: 0px;
     height: auto;
-}
-
-#done {
-    position: absolute;
-    width: auto;
-    height: auto;
-    right: 116px;
-    margin-left: auto;
-    bottom: 28px;
-    margin-top: auto;
-    left: 114px;
-    top: 329px;
 }
 
 #frontImg {
@@ -68,8 +47,12 @@ body {
     color: rgb(255, 255, 255);
     text-shadow: rgb(0, 0, 0) 1px 1px 0px;
     font-family: LucidaGrande;
-    left: 20px;
-    top: 134px;
+    left: 114px;
+    top: 120px;
+    width: auto;
+    height: auto;
+    right: 115px;
+    bottom: 244px;
 }
 
 #option {
@@ -94,9 +77,11 @@ body {
     color: black;
     font-size: 10pt;
     font-family: LucidaGrande;
-    width: 170px;
-    left: 80px;
-    top: 128px;
+    width: 151px;
+    left: 58px;
+    top: 142px;
+    height: auto;
+    bottom: 216px;
 }
 
 #text1 {
@@ -107,8 +92,12 @@ body {
     color: rgb(255, 255, 255);
     text-shadow: rgb(0, 0, 0) 1px 1px 0px;
     font-family: LucidaGrande;
-    left: 20px;
-    top: 99px;
+    left: 100px;
+    top: 67px;
+    width: auto;
+    height: auto;
+    right: 105px;
+    bottom: 297px;
 }
 
 #subdomain {
@@ -117,8 +106,10 @@ body {
     font-size: 10pt;
     font-family: LucidaGrande;
     width: 150px;
-    left: 100px;
-    top: 94px;
+    left: 58px;
+    top: 90px;
+    height: auto;
+    bottom: 268px;
 }
 
 #loading {
@@ -223,10 +214,14 @@ div.exception .timeago {
     overflow: hidden;
     color: rgb(255, 255, 255);
     font-size: 18pt;
-    font-family: ArialRoundedMTBold;
+    font-family: Futura;
     text-shadow: rgb(0, 0, 0) 1px 1px 1px;
-    left: 75px;
+    left: 74px;
     top: 20px;
+    width: auto;
+    height: auto;
+    right: 77px;
+    bottom: 332px;
 }
 
 #airbrake-front {
@@ -235,7 +230,7 @@ div.exception .timeago {
     overflow: hidden;
     color: rgb(255, 255, 255);
     font-size: 18pt;
-    font-family: ArialRoundedMTBold;
+    font-family: Futura;
     text-shadow: rgb(0, 0, 0) 1px 1px 1px;
     left: 75px;
     width: 130px;
@@ -244,6 +239,11 @@ div.exception .timeago {
 
 #author {
     cursor: pointer;
+    width: auto;
+    height: auto;
+    top: 350px;
+    left: 81px;
+    right: 69px;
 }
 
 #unable {
@@ -285,4 +285,20 @@ div.exception .timeago {
     width: 360px;
     height: 240px;
     position: relative;
+}
+
+#info {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 340px;
+    left: 240px;
+}
+
+#done {
+    position: absolute;
+    width: 50px;
+    height: 22px;
+    top: 200px;
+    left: 115px;
 }
