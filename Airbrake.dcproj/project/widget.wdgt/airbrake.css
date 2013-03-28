@@ -15,17 +15,6 @@ body {
     display: none;
 }
 
-#backImg {
-    position: absolute;
-    display: block;
-    top: 0px;
-    left: 0px;
-    width: auto;
-    height: auto;
-    right: 0px;
-    bottom: 0px;
-}
-
 #frontImg {
     position: absolute;
     display: block;
@@ -48,11 +37,11 @@ body {
     text-shadow: rgb(0, 0, 0) 1px 1px 0px;
     font-family: LucidaGrande;
     left: 100px;
-    top: 79px;
+    top: 67px;
     width: auto;
     height: auto;
     right: 105px;
-    bottom: 285px;
+    bottom: 297px;
 }
 
 #text2 {
@@ -64,11 +53,11 @@ body {
     text-shadow: rgb(0, 0, 0) 1px 1px 0px;
     font-family: LucidaGrande;
     left: 114px;
-    top: 132px;
+    top: 122px;
     width: auto;
     height: auto;
     right: 115px;
-    bottom: 232px;
+    bottom: 242px;
 }
 
 #text3 {
@@ -80,27 +69,11 @@ body {
     text-shadow: rgb(0, 0, 0) 1px 1px 0px;
     font-family: LucidaGrande;
     left: 76px;
-    top: 193px;
+    top: 183px;
     width: auto;
     height: auto;
     right: 84px;
-    bottom: 171px;
-}
-
-#text4 {
-    position: absolute;
-    font-size: 10pt;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    color: rgb(255, 255, 255);
-    text-shadow: rgb(0, 0, 0) 1px 1px 0px;
-    font-family: LucidaGrande;
-    left: 83px;
-    top: 246px;
-    width: auto;
-    height: auto;
-    right: 77px;
-    bottom: 118px;
+    bottom: 181px;
 }
 
 #option {
@@ -127,9 +100,9 @@ body {
     font-family: LucidaGrande;
     width: 151px;
     left: 58px;
-    top: 154px;
+    top: 145px;
     height: auto;
-    bottom: 204px;
+    bottom: 213px;
 }
 
 #subdomain {
@@ -139,9 +112,9 @@ body {
     font-family: LucidaGrande;
     width: 150px;
     left: 58px;
-    top: 102px;
+    top: 90px;
     height: auto;
-    bottom: 256px;
+    bottom: 268px;
 }
 
 #loading {
@@ -273,9 +246,10 @@ div.exception .timeago {
     cursor: pointer;
     width: auto;
     height: auto;
-    top: 350px;
+    top: 352px;
     left: 81px;
     right: 69px;
+    bottom: 17px;
 }
 
 #unable {
@@ -340,19 +314,42 @@ div.exception .timeago {
     height: 15px;
     position: absolute;
     left: 56px;
-    top: 215px;
+    top: 209px;
     right: auto;
     bottom: auto;
     margin-top: 0px;
 }
 
-#slider1 {
-    width: 156px;
-    height: 15px;
+#backImg {
     position: absolute;
-    left: 56px;
-    top: 279px;
-    right: auto;
-    bottom: auto;
-    margin-top: 0px;
+    display: block;
+    top: 0px;
+    left: 0px;
+    width: auto;
+    height: auto;
+    right: 0px;
+    bottom: 0px;
+}
+
+#slider_desc {
+    position: absolute;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: LucidaGrande;
+    font-size: 7pt;
+    text-shadow: rgb(0, 0, 0) 1px 1px 0px;
+    color: rgb(255, 255, 255);
+    left: 120px;
+    top: 172px;
+}
+
+#slider_desc {
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    top: 230px;
+    left: 69px;
+    text-align: center;
+    right: 65px;
+    bottom: 139px;
 }

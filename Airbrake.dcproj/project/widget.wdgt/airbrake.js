@@ -200,3 +200,11 @@ if (window.widget) {
     widget.onhide = hide;
     widget.onshow = show;
 }
+
+function warningSliderChangeValue(value)
+{
+    // Insérez le code ici
+    var value_mux = value * 10;
+    $("#slider_desc").html("Notify when errors count > "+ value_mux)
+    widget.setPreferenceForKey(value_mux, createInstancePreferenceKey("AirbrakeWarningThreshold"));
+}
