@@ -1,13 +1,13 @@
 desc "Prepare widget to be deployed"
 task "prepare" do
-  system "rm -rf ../HopToad.wdgt" if File.directory?("../HopToad.wdgt")
-  system "cp -R ../HopToad ../HopToad.wdgt"
-  system "cp -R ../HopToad.wdgt /tmp/"
+  system "rm -rf ../Airbrake.wdgt" if File.directory?("../Airbrake.wdgt")
+  system "cp -R ../Airbrake ../Airbrake.wdgt"
+  system "cp -R ../Airbrake.wdgt /tmp/"
 end
 
 desc "Create a new package"
 task "deploy" => :prepare do
-  path = "/tmp/HopToad.wdgt/HopToad.js"
+  path = "/tmp/Airbrake.wdgt/Airbrake.js"
   contents = File.read(path)
   contents.gsub!(/var DEBUG\s*=(.*?)$/sim, "var DEBUG = false;")
 
@@ -16,6 +16,6 @@ end
 
 desc "Install the widget"
 task "install" => :prepare do
-  system "open /tmp/HopToad.wdgt"
+  system "open /tmp/Airbrake.wdgt"
   system "killall DashboardClient"
 end

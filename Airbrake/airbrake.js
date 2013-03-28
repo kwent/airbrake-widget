@@ -25,8 +25,8 @@ function remove()
     // Remove any preferences as needed
     clearTimeout(TIMEOUT);
     clearTimeout(GROWL);
-    widget.setPreferenceForKey(null, createInstancePreferenceKey("HopToadApiKey"));
-    widget.setPreferenceForKey(null, createInstancePreferenceKey("HopToadSubdomain"));
+    widget.setPreferenceForKey(null, createInstancePreferenceKey("AirbrakeApiKey"));
+    widget.setPreferenceForKey(null, createInstancePreferenceKey("AirbrakeSubdomain"));
 
 	log("remove", "credentials has been removed");
 }
@@ -39,7 +39,7 @@ function hide()
 {
     // Stop any timers to prevent CPU usage
 	// clearInterval(TIMEOUT);
-	log("hide", "widget has been hid");
+	log("hide", "widget has been hidden");
 }
 
 //
@@ -104,8 +104,8 @@ function showFront(event)
         setTimeout('widget.performTransition();', 0);
     }
 
-	$("#hoptoad-back, #hoptoad-front").click(function(){
-		widget.openURL("http://hoptoadapp.com");
+	$("#airbrake-back, #airbrake-front").click(function(){
+		widget.openURL("http://airbrake.io");
 	});
 	
 	$("#reload").click(function(){
@@ -118,8 +118,8 @@ function showFront(event)
 
 function saveProject(event)
 {
-	widget.setPreferenceForKey($("#apiKey").val().toString(), createInstancePreferenceKey("HopToadApiKey"));
-	widget.setPreferenceForKey($("#subdomain").val().toString(), createInstancePreferenceKey("HopToadSubdomain"));
+	widget.setPreferenceForKey($("#apiKey").val().toString(), createInstancePreferenceKey("AirbrakeApiKey"));
+	widget.setPreferenceForKey($("#subdomain").val().toString(), createInstancePreferenceKey("AirbrakeSubdomain"));
 	
 	$('#apiKey').val("");
 	$('#subdomain').val("");
@@ -130,8 +130,8 @@ function saveProject(event)
 
 function preferences() {
 	return {
-		apiKey: widget.preferenceForKey(createInstancePreferenceKey("HopToadApiKey")),
-		subdomain: widget.preferenceForKey(createInstancePreferenceKey("HopToadSubdomain"))
+		apiKey: widget.preferenceForKey(createInstancePreferenceKey("AirbrakeApiKey")),
+		subdomain: widget.preferenceForKey(createInstancePreferenceKey("AirbrakeSubdomain"))
 	}
 }
 
@@ -153,7 +153,7 @@ function loadExceptions(should_growl) {
 	log("loadExceptions", "loading exceptions");
 	
 	if (prefs.apiKey && prefs.apiKey != "" && prefs.subdomain && prefs.subdomain != "") {
-		var cmd = "/usr/bin/osascript HopToad.scpt " + prefs.subdomain + " " + prefs.apiKey;
+		var cmd = "/usr/bin/osascript airbrake.scpt " + prefs.subdomain + " " + prefs.apiKey;
 		
 		$("#inform").hide();
 		

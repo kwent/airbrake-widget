@@ -196,11 +196,11 @@ p.exception .timeago {
     font-size: 7pt;
     text-shadow: rgb(0, 0, 0) 1px 1px 0px;
     color: rgb(255, 255, 255);
-    left: 139px;
+    left: 120px;
     top: 172px;
 }
 
-#hoptoad-back {
+#airbrake-back {
     position: absolute;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -212,16 +212,18 @@ p.exception .timeago {
     top: 61px;
 }
 
-#hoptoad-front {
+#airbrake-front {
     position: absolute;
-    width: 137px;
-    height: 51px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    font-size: 18pt;
+    font-family: ArialRoundedMTBold;
+    text-shadow: rgb(0, 0, 0) 1px 1px 1px;
     left: 25px;
     top: 17px;
 }
 
-#hoptoad-back,
-#hoptoad-front,
 #author {
     cursor: pointer;
 }

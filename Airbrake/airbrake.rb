@@ -5,7 +5,9 @@ require "uri"
 require "net/http"
 require "time"
 
-class HopToad
+OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+
+class Airbrake
   def url
     "https://#{subdomain}.airbrake.io/errors.xml?auth_token=#{api_key}&page=#{page}"
   end
@@ -36,7 +38,7 @@ class HopToad
   end
 end
 
-ht = HopToad.new
+ht = Airbrake.new
 
 if ht.authorized?
   xml = REXML::Document.new(ht.load)
