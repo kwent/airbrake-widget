@@ -26,9 +26,9 @@
 	<integer>15</integer>
 	<key>Height</key>
 	<integer>380</integer>
+  <key>Width</key>
+	<integer>280</integer>
 	<key>MainHTML</key>
 	<string>airbrake.html</string>
-	<key>Width</key>
-	<integer>280</integer>
 </dict>
 </plist>
