@@ -113,7 +113,7 @@ function showFront(event)
 		loadExceptions(true);
 	});
 	
-	loadExceptions();
+	loadExceptions(true);
 }
 
 function saveProject(event)
@@ -140,16 +140,22 @@ function preferences() {
 	}
 }
 
-function loadExceptions() {
+function loadExceptions(with_loader) {
 	clearTimeout(TIMEOUT);
 	
 	var prefs = preferences();
+  
+  if(with_loader)
+    $("#loading").show();
 	
 	log("loadExceptions", "loading exceptions");
 	
 	if (prefs.apiKey && prefs.apiKey != "" && prefs.subdomain && prefs.subdomain != "") {
 		var cmd = "/usr/bin/osascript airbrake.scpt " + prefs.subdomain + " " + prefs.apiKey;
 		
+    if(with_loader)
+      $("#loading").hide();
+      
 		$("#inform").hide();
 		
 		log("step", "about to execute command");
