@@ -30,34 +30,37 @@ body {
 
 #text1 {
     position: absolute;
-    font-size: 10pt;
+    font-size: 11pt;
     text-overflow: ellipsis;
     overflow: hidden;
     color: rgb(255, 255, 255);
     text-shadow: rgb(0, 0, 0) 1px 1px 0px;
-    font-family: LucidaGrande;
+    font-family: Futura;
     left: 137px;
-    top: 131px;
+    top: 156px;
     width: auto;
     height: auto;
+    line-height: 16px;
+    text-align: center;
     right: 141px;
-    bottom: 290px;
+    bottom: 265px;
 }
 
 #text2 {
     position: absolute;
-    font-size: 10pt;
+    font-size: 11pt;
     text-overflow: ellipsis;
     overflow: hidden;
     color: rgb(255, 255, 255);
     text-shadow: rgb(0, 0, 0) 1px 1px 0px;
-    font-family: LucidaGrande;
+    font-family: Futura;
     left: 150px;
-    top: 186px;
+    top: 211px;
     width: auto;
     height: auto;
+    text-align: center;
     right: 156px;
-    bottom: 237px;
+    bottom: 212px;
 }
 
 #option {
@@ -85,9 +88,9 @@ body {
     font-family: LucidaGrande;
     width: 151px;
     left: 102px;
-    top: 209px;
+    top: 234px;
     height: auto;
-    bottom: 211px;
+    bottom: 186px;
 }
 
 #subdomain {
@@ -97,9 +100,9 @@ body {
     font-family: LucidaGrande;
     width: 150px;
     left: 102px;
-    top: 154px;
+    top: 179px;
     height: auto;
-    bottom: 266px;
+    bottom: 241px;
 }
 
 #loading {
@@ -216,11 +219,11 @@ div.exception .timeago {
     cursor: pointer;
     width: auto;
     height: auto;
-    top: 409px;
-    left: 114px;
-    right: 108px;
-    bottom: 19px;
-    text-align: center;
+    top: 393px;
+    left: 126px;
+    text-align: left;
+    right: 96px;
+    bottom: 35px;
 }
 
 #airbrake-back {
@@ -231,12 +234,12 @@ div.exception .timeago {
     font-size: 18pt;
     font-family: Futura;
     text-shadow: rgb(0, 0, 0) 1px 1px 1px;
-    left: 120px;
-    top: 20px;
+    left: 143px;
+    top: 50px;
     width: auto;
     height: auto;
-    right: 114px;
-    bottom: 391px;
+    right: 91px;
+    bottom: 361px;
 }
 
 #airbrake-front {
@@ -257,11 +260,11 @@ div.exception .timeago {
     cursor: pointer;
     width: auto;
     height: auto;
-    top: 391px;
-    left: 114px;
-    right: 108px;
-    bottom: 37px;
-    text-align: center;
+    top: 377px;
+    left: 126px;
+    text-align: left;
+    right: 96px;
+    bottom: 51px;
 }
 
 #unable {
@@ -324,7 +327,7 @@ div.exception .timeago {
     position: absolute;
     width: 50px;
     height: 22px;
-    top: 258px;
+    top: 280px;
     left: 153px;
 }
 
@@ -346,4 +349,20 @@ div.exception .timeago {
     left: 83px;
     right: 80px;
     bottom: 252px;
+}
+
+#icon {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 44px;
+    left: 92px;
+}
+
+#icon1 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 376px;
+    left: 90px;
 }

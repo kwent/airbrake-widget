@@ -21,8 +21,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {1031, 336}}</string>
-			<string>{{0, 346}, {1031, 265}}</string>
+			<string>{{0, 0}, {1031, 233}}</string>
+			<string>{{0, 243}, {1031, 368}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -160,13 +160,13 @@
 		<array>
 			<array>
 				<integer>0</integer>
-				<integer>1</integer>
-				<integer>6</integer>
+				<integer>0</integer>
+				<integer>0</integer>
 			</array>
 		</array>
 		<key>Visible StackLayout Views</key>
 		<array>
-			<string>back</string>
+			<string>front</string>
 		</array>
 	</dict>
 </dict>
