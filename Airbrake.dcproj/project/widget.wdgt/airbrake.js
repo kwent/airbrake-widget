@@ -78,6 +78,9 @@ function showBack(event)
 	$("#author")[0].onclick = function(){
 		widget.openURL("http://simplesideias.com.br");
 	}
+  $("#author1")[0].onclick = function(){
+		widget.openURL("http://www.quentinrousseau.fr");
+	}
 }
 
 //
