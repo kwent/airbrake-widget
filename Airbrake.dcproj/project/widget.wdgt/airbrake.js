@@ -207,4 +207,11 @@ function warningSliderChangeValue(value)
     var value_mux = value * 10;
     $("#slider_desc").html("Notify when errors count > "+ value_mux)
     widget.setPreferenceForKey(value_mux, createInstancePreferenceKey("AirbrakeWarningThreshold"));
+    //notify("toto");
+}
+
+function notify(message)
+{
+  widget.system("/usr/bin/osascript notify.scpt", function(cmd){
+  log("notify", cmd.outputString);});
 }

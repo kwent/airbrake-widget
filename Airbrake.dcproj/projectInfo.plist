@@ -6,6 +6,12 @@
 	<dict>
 		<key>Widget</key>
 		<dict>
+			<key>AppIconFGImagePoint</key>
+			<string>{0, 0}</string>
+			<key>AppIconFGImageSize</key>
+			<string>{0, 0}</string>
+			<key>AppIconIncludeFGImage</key>
+			<false/>
 			<key>CYBackwardCompatibleExport</key>
 			<false/>
 			<key>CYShineVersion</key>
@@ -93,13 +99,13 @@
 			</array>
 			<key>TemplateIdentifier</key>
 			<string>com.apple.Dashcode.template.custom</string>
-			<key>UseCustomDefaultImage</key>
+			<key>UseCustomAppIcon</key>
 			<true/>
 		</dict>
 	</dict>
 	<key>CYProjectFormatVersion</key>
 	<integer>40</integer>
 	<key>IsInCodeGeneratorMode</key>
-	<true/>
+	<false/>
 </dict>
 </plist>

@@ -57,9 +57,9 @@ if ht.authorized?
           <p>
             <strong>#{count}</strong>
             <a>#{message.gsub('::',' :: ')}</a>
-            <span class="timeago">
+            <p class="timeago">
               ~ <abbr title="#{most_recent.utc.strftime("%FT%T%z")}">#{most_recent.strftime("%b %d, %Y ~ %I:%M%p")}</abbr>
-            </span>
+            </p>
           </p>
         </div>
       )

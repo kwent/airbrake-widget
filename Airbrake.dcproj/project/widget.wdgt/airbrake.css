@@ -151,7 +151,7 @@ div.exception {
     margin-right: 10px;
     position: relative;
     cursor: pointer;
-    width: 320px;
+    width: 300px;
     overflow: hidden;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -166,24 +166,18 @@ div.exception:hover {
 }
 
 div.exception strong {
-    display: block;
-    color: rgb(255, 255, 255);
-    font-size: 14px;
-    background-color: rgb(111, 184, 0);
-    padding: 5px;
-    min-width: 20px;
-    min-height: 15px;
-    text-align: center;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    position: relative;
-    margin-right: 5px;
-    margin-bottom: 3px;
-    float: left;
-    white-space: pre-line;
-    word-wrap: break-word;
+  display: block;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  background-color: rgb(111, 184, 0);
+  min-width: 35px;
+  min-height: 25px;
+  text-align: center;
+  border-radius: 35px;
+  position: relative;
+  padding-top: 10px;
+  margin-right: 5px;
+  float: left;
 }
 
 div.exception p {
@@ -195,6 +189,7 @@ div.exception a {
     font-size: 11px;
     color: rgb(119, 119, 119);
     display: block;
+    word-wrap: break-word;
 }
 
 div.exception abbr {
