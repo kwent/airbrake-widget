@@ -10,7 +10,7 @@
 	<key>CYBackwardCompatibleExport</key>
 	<false/>
 	<key>CYLastWindowPosition</key>
-	<string>{669, 187}</string>
+	<string>{536, 122}</string>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -21,8 +21,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {1031, 258}}</string>
-			<string>{{0, 268}, {1031, 343}}</string>
+			<string>{{0, 0}, {1031, 316}}</string>
+			<string>{{0, 326}, {1031, 285}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
