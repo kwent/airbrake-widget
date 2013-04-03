@@ -10,6 +10,8 @@ function setupParts() {
     CreateText('text2', { text: 'API Key' });
     CreateText('text1', { text: 'Subdomain' });
     CreateText('inform', { text: 'Inform your account info' });
+    CreateText('author', { text: 'Modified by Quentin Rousseau' });
+    CreateText('author1', { text: 'Created by Nando Vieira' });
     CreateText('unable', { text: 'Unable to retrieve exceptions' });
     CreateText('no-exceptions', { text: 'Congrats!\nNo exceptions found!' });
     CreateText('reload', { text: 'reload' });

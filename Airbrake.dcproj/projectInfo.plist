@@ -101,8 +101,6 @@
 			<string>com.apple.Dashcode.template.custom</string>
 			<key>UseCustomAppIcon</key>
 			<true/>
-			<key>UseCustomDefaultImage</key>
-			<true/>
 		</dict>
 	</dict>
 	<key>CYProjectFormatVersion</key>

@@ -20,13 +20,14 @@ function load()
 //
 function remove()
 {
-    // Stop any timers to prevent CPU usage
-    // Remove any preferences as needed
-    clearTimeout(TIMEOUT);
-    widget.setPreferenceForKey(null, createInstancePreferenceKey("AirbrakeApiKey"));
-    widget.setPreferenceForKey(null, createInstancePreferenceKey("AirbrakeSubdomain"));
+  // Stop any timers to prevent CPU usage
+  // Remove any preferences as needed
+  clearTimeout(TIMEOUT);
+  widget.setPreferenceForKey(null, createInstancePreferenceKey("AirbrakeApiKey"));
+  widget.setPreferenceForKey(null, createInstancePreferenceKey("AirbrakeSubdomain"));
+  widget.setPreferenceForKey(null, createInstancePreferenceKey("AirbrakeRefreshInterval"));
 
-	log("remove", "credentials has been removed");
+  log("remove", "credentials has been removed");
 }
 
 //
@@ -35,7 +36,7 @@ function remove()
 //
 function hide()
 {
-    // Stop any timers to prevent CPU usage
+  // Stop any timers to prevent CPU usage
 	// clearInterval(TIMEOUT);
 	log("hide", "widget has been hidden");
 }
@@ -75,11 +76,11 @@ function showBack(event)
 	
 	$("#apiKey").val(prefs.apiKey);
 	$("#subdomain").val(prefs.subdomain);
-	$("#author")[0].onclick = function(){
-		widget.openURL("http://simplesideias.com.br");
-	}
-  $("#author1")[0].onclick = function(){
+  $("#author")[0].onclick = function(){
 		widget.openURL("http://www.quentinrousseau.fr");
+	}
+	$("#author1")[0].onclick = function(){
+		widget.openURL("http://simplesideias.com.br");
 	}
 }
 
@@ -91,19 +92,19 @@ function showBack(event)
 //
 function showFront(event)
 {
-    var front = document.getElementById("front");
-    var back = document.getElementById("back");
+  var front = document.getElementById("front");
+  var back = document.getElementById("back");
 
-    if (window.widget) {
-        widget.prepareForTransition("ToFront");
-    }
+  if (window.widget) {
+      widget.prepareForTransition("ToFront");
+  }
 
-    front.style.display="block";
-    back.style.display="none";
+  front.style.display="block";
+  back.style.display="none";
 
-    if (window.widget) {
-        setTimeout('widget.performTransition();', 0);
-    }
+  if (window.widget) {
+      setTimeout('widget.performTransition();', 0);
+  }
 
 	$("#airbrake-back, #airbrake-front").click(function(){
 		widget.openURL("http://airbrake.io");
@@ -118,8 +119,6 @@ function showFront(event)
 
 function saveProject(event)
 {
-  log("event", event.type);
-
   if( event.type == "mouseup" || ( event.type == "keypress" && event.which == 13) )
   {
   	widget.setPreferenceForKey($("#apiKey").val().toString(), createInstancePreferenceKey("AirbrakeApiKey"));
@@ -129,7 +128,7 @@ function saveProject(event)
     $('#subdomain').val("");
     showFront(event);
 	
-    log("preferences", "api key and subdomain has been saved");
+    log("preferences", "api key and subdomain and refresh interval has been saved");
   }
 }
 
@@ -159,46 +158,78 @@ function loadExceptions(with_loader) {
 		log("step", "about to execute command");
 		log("run", cmd);
 		
-		widget.system(cmd, function(cmd){
+		widget.system(cmd, function(cmd)
+    {
 			log("step", "command executed");
+      
+      log("output", cmd.outputString);
+      
 			var output = cmd.outputString;
-            
-      log("output", output);
-      
-      if(with_loader)
-        $("#loading").hide();
-      
-      $("#inform").hide();
-      
-       $("#last_update").html("Last update: <br/>" + new Date().toDateString() + '-' + new Date().toLocaleTimeString());
 			
-			if (output.match(/exception/gim)) {
+			if (output.match(/exception/gim))
+      {
 				$("#scrollArea")
 					.html(output)
 					.removeClass('hide');
 					
 				$('#no-exceptions')
 					.addClass('hide');
+          
+        if(with_loader)
+          $("#loading").hide();
+        
+        $('#inform').addClass('hide');
 				
-				$("abbr").timeago();
-			} else if (output.match(/no-results/)) {
+				$('abbr').timeago();
+        
+        $('#last_update').html("Last update: <br/>" + new Date().toDateString() + '-' + new Date().toLocaleTimeString());
+        
+        $('#last_update')
+          .removeClass("hide");
+      
+        log("last_update", new Date().toDateString() + '-' + new Date().toLocaleTimeString());
+        
+			}
+      else if (output.match(/no-results/))
+      {
 				$('#no-exceptions')
 					.removeClass('hide');
 				
 				$('#scrollArea, #inform')
 					.addClass("hide");
-			} else {
-				$("#scrollArea, #inform")
-					.addClass("hide");
+        
+        if(with_loader)
+          $('#loading').hide();
+          
+        $('#inform').addClass('hide');
+			}
+      else
+      {
+				$('#scrollArea, #inform')
+					.addClass('hide');
+          
+        if(with_loader)
+          $("#loading").hide();
+          
+        $('#inform').addClass('hide');
 				
-				$("#unable")
-					.removeClass("hide");
+				$('#unable')
+					.removeClass('hide');
 			}
 		});
 		
-		TIMEOUT = setTimeout(loadExceptions, MINUTE);
-	} else {
-		$("#inform").show();
+    if (widget.preferenceForKey(createInstancePreferenceKey("AirbrakeRefreshInterval")) == null)
+    {
+      log("nil timeout = :", widget.preferenceForKey(createInstancePreferenceKey("AirbrakeRefreshInterval")))
+      widget.setPreferenceForKey(1, createInstancePreferenceKey("AirbrakeRefreshInterval"));
+    }
+      
+		TIMEOUT = setTimeout(loadExceptions, widget.preferenceForKey(createInstancePreferenceKey("AirbrakeRefreshInterval")) * MINUTE);
+    
+	}
+  else
+  {
+		$('#inform').show();
 		log("loadExceptions", "no credentials found");
 	}
 }
@@ -215,17 +246,16 @@ if (window.widget) {
     widget.onshow = show;
 }
 
-function warningSliderChangeValue(value)
+function refreshIntervalsliderChangeValue(value)
 {
-    // Insérez le code ici
-    var value_mux = value * 10;
-    $("#slider_desc").html("Notify when errors count > "+ value_mux)
-    widget.setPreferenceForKey(value_mux, createInstancePreferenceKey("AirbrakeWarningThreshold"));
-    //notify("toto");
+    $('#text4').html("Refresh every "+ value + "min.");
+    widget.setPreferenceForKey(value, createInstancePreferenceKey("AirbrakeRefreshInterval"));
 }
 
+/*
 function notify(message)
 {
   widget.system("/usr/bin/osascript notify.scpt", function(cmd){
   log("notify", cmd.outputString);});
 }
+*/
