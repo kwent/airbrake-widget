@@ -144,17 +144,20 @@ function loadExceptions(with_loader) {
 	
 	var prefs = preferences();
 
-	
 	log("loadExceptions", "loading exceptions");
 	
-	if (prefs.apiKey && prefs.apiKey != "" && prefs.subdomain && prefs.subdomain != "") {
+	if (prefs.apiKey && prefs.apiKey != "" && prefs.subdomain && prefs.subdomain != "")
+  {
 		var cmd = "/usr/bin/osascript airbrake.scpt " + prefs.subdomain + " " + prefs.apiKey;
   
+    $('#inform').addClass('hide');
+    $('#unable').addClass('hide');
+    $('#no-result').addClass('hide');
+    $('#no-exceptions').addClass('hide');
+    
     if(with_loader)
         $("#loading").show();
-        
-    $("#inform").hide();
-        
+  
 		log("step", "about to execute command");
 		log("run", cmd);
 		
@@ -162,23 +165,15 @@ function loadExceptions(with_loader) {
     {
 			log("step", "command executed");
       
-      log("output", cmd.outputString);
-      
 			var output = cmd.outputString;
 			
 			if (output.match(/exception/gim))
       {
-				$("#scrollArea")
-					.html(output)
+				$("#scrollArea").html(output)
 					.removeClass('hide');
-					
-				$('#no-exceptions')
-					.addClass('hide');
           
         if(with_loader)
           $("#loading").hide();
-        
-        $('#inform').addClass('hide');
 				
 				$('abbr').timeago();
         
@@ -194,24 +189,20 @@ function loadExceptions(with_loader) {
       {
 				$('#no-exceptions')
 					.removeClass('hide');
-				
-				$('#scrollArea, #inform')
-					.addClass("hide");
         
         if(with_loader)
           $('#loading').hide();
-          
-        $('#inform').addClass('hide');
+        
+        $('#last_update').html("Last update: <br/>" + new Date().toDateString() + '-' + new Date().toLocaleTimeString());
+        
+        $('#last_update')
+          .removeClass("hide");
+        
 			}
       else
-      {
-				$('#scrollArea, #inform')
-					.addClass('hide');
-          
+      {          
         if(with_loader)
           $("#loading").hide();
-          
-        $('#inform').addClass('hide');
 				
 				$('#unable')
 					.removeClass('hide');
@@ -220,7 +211,6 @@ function loadExceptions(with_loader) {
 		
     if (widget.preferenceForKey(createInstancePreferenceKey("AirbrakeRefreshInterval")) == null)
     {
-      log("nil timeout = :", widget.preferenceForKey(createInstancePreferenceKey("AirbrakeRefreshInterval")))
       widget.setPreferenceForKey(1, createInstancePreferenceKey("AirbrakeRefreshInterval"));
     }
       
@@ -251,11 +241,3 @@ function refreshIntervalsliderChangeValue(value)
     $('#text4').html("Refresh every "+ value + "min.");
     widget.setPreferenceForKey(value, createInstancePreferenceKey("AirbrakeRefreshInterval"));
 }
-
-/*
-function notify(message)
-{
-  widget.system("/usr/bin/osascript notify.scpt", function(cmd){
-  log("notify", cmd.outputString);});
-}
-*/

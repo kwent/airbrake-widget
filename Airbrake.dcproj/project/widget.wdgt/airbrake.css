@@ -105,7 +105,7 @@ body {
     bottom: 276px;
 }
 
-#inform, #no-exceptions {
+#inform {
     position: absolute;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -120,11 +120,10 @@ body {
 }
 
 #no-exceptions {
-    left: 20px;
+    left: 85px !important;
     width: 319px;
     height: auto;
-    top: 0px;
-    bottom: 442px;
+    top: 189px !important;
 }
 
 div.exception {
@@ -263,21 +262,6 @@ div.exception .timeago {
     bottom: 51px;
 }
 
-#unable {
-    position: absolute;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    text-align: center;
-    font-family: ArialRoundedMTBold;
-    color: rgb(178, 178, 178);
-    font-size: 18pt;
-    width: 240px;
-    left: 70px;
-    top: 0px;
-    height: auto;
-    bottom: 442px;
-}
-
 #reload {
     border: 1px solid rgb(211, 211, 211);
     text-transform: lowercase;
@@ -372,7 +356,7 @@ div.exception .timeago {
     left: 90px;
 }
 
-#inform, #loading {
+#inform, #loading, #unable, #no-exceptions {
     position: absolute;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -384,6 +368,12 @@ div.exception .timeago {
     width: 200px;
     left: 40px;
     top: 116px;
+}
+
+#unable {
+    left: 30px;
+    width: 300px;
+    top: 190px !important;
 }
 
 #loading {

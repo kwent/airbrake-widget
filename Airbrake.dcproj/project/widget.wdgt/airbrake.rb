@@ -38,13 +38,13 @@ end
 
 ht = Airbrake.new
 
-if ht.authorized?
+#if ht.authorized?
   xml = REXML::Document.new(ht.load)
 
-  if xml.elements.to_a("groups/group").size.zero?
+  if xml.root.nil?
+    contents = "errors"
+  elsif xml.elements.to_a("groups/group").size.zero?
     contents = "no-results"
-  else
-    contents = ""
 
     xml.elements.each("groups/group") { |group|
       message     = group.elements["error-message"].text.to_s.gsub(/</, '&lt;').gsub(/>/, '&gt;')
@@ -67,4 +67,4 @@ if ht.authorized?
   end
 
   puts contents
-end
+#end
