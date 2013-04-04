@@ -7,7 +7,7 @@ require "time"
 
 class Airbrake
   def url
-    "https://#{subdomain}.airbrake.io/errors.xml?auth_token=#{api_key}&page=#{page}"
+    "http://#{subdomain}.airbrake.io/errors.xml?auth_token=#{api_key}&page=#{page}"
   end
 
   def api_key
@@ -36,15 +36,17 @@ class Airbrake
   end
 end
 
-ht = Airbrake.new
+ab = Airbrake.new
 
-#if ht.authorized?
-  xml = REXML::Document.new(ht.load)
+if ab.authorized?
+  xml = REXML::Document.new(ab.load)
 
   if xml.root.nil?
-    contents = "errors"
+    contents = 'errors'
   elsif xml.elements.to_a("groups/group").size.zero?
-    contents = "no-results"
+    contents = 'no-results'
+  else
+    contents =  ''
 
     xml.elements.each("groups/group") { |group|
       message     = group.elements["error-message"].text.to_s.gsub(/</, '&lt;').gsub(/>/, '&gt;')
@@ -53,7 +55,7 @@ ht = Airbrake.new
       id          = group.elements["id"].text.to_i
 
       contents << %(
-        <div onclick="widget.openURL('http://#{ht.subdomain}.airbrake.io/errors/#{id}');" title="Go to Airbrake" id="exception-#{id}" class="exception">
+        <div onclick="widget.openURL('http://#{ab.subdomain}.airbrake.io/errors/#{id}?auth_token=#{ab.api_key}');" title="Go to Airbrake" id="exception-#{id}" class="exception">
           <p>
             <strong>#{count}</strong>
             <a>#{message.gsub('::',' :: ')}</a>
@@ -67,4 +69,4 @@ ht = Airbrake.new
   end
 
   puts contents
-#end
+end

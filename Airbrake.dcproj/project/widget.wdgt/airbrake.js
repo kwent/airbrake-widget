@@ -157,7 +157,7 @@ function loadExceptions(with_loader) {
     
     if(with_loader)
         $("#loading").show();
-  
+        
 		log("step", "about to execute command");
 		log("run", cmd);
 		
@@ -166,8 +166,11 @@ function loadExceptions(with_loader) {
 			log("step", "command executed");
       
 			var output = cmd.outputString;
+      
+      log("output", output);
+
 			
-			if (output.match(/exception/gim))
+			if (output.match(/exception/) != null)
       {
 				$("#scrollArea").html(output)
 					.removeClass('hide');
@@ -185,10 +188,13 @@ function loadExceptions(with_loader) {
         log("last_update", new Date().toDateString() + '-' + new Date().toLocaleTimeString());
         
 			}
-      else if (output.match(/no-results/))
+      else if (output.match(/no-results/) != null)
       {
 				$('#no-exceptions')
 					.removeClass('hide');
+          
+        $("#scrollArea")
+					.addClass('hide');
         
         if(with_loader)
           $('#loading').hide();
@@ -203,6 +209,9 @@ function loadExceptions(with_loader) {
       {          
         if(with_loader)
           $("#loading").hide();
+          
+        $("#scrollArea")
+					.addClass('hide');
 				
 				$('#unable')
 					.removeClass('hide');

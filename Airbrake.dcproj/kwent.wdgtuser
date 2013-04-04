@@ -10,7 +10,7 @@
 	<key>CYBackwardCompatibleExport</key>
 	<false/>
 	<key>CYLastWindowPosition</key>
-	<string>{511, 165}</string>
+	<string>{585, 91}</string>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -21,8 +21,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {1031, 285}}</string>
-			<string>{{0, 295}, {1031, 316}}</string>
+			<string>{{0, 0}, {1031, 325}}</string>
+			<string>{{0, 335}, {1031, 277}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -58,12 +58,12 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {248, 632}}</string>
-			<string>{{249, 0}, {1032, 632}}</string>
+			<string>{{0, 0}, {248, 633}}</string>
+			<string>{{249, 0}, {1032, 633}}</string>
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>0 125 1280 653 0 0 1280 778 </string>
+	<string>0 124 1280 654 0 0 1280 778 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -74,8 +74,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {250, 338}}</string>
-			<string>{{0, 348}, {250, 263}}</string>
+			<string>{{0, 0}, {250, 339}}</string>
+			<string>{{0, 349}, {250, 263}}</string>
 		</array>
 	</dict>
 	<key>Objects view expanded items</key>
